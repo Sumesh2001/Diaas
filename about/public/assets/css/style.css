@@ -1,0 +1,114 @@
+/* diaas Website Styles - Matching diaas.com */
+
+:root {
+    --diaas-orange: #ff6b35;
+    --diaas-orange-hover: #e55a2b;
+    --diaas-green: #2d6e5e;
+    --diaas-green-dark: #1a4f43;
+    --diaas-white: #ffffff;
+    --diaas-light-gray: #f8f9fa;
+    --diaas-dark-gray: #333333;
+    --diaas-medium-gray: #666666;
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--diaas-dark-gray);
+    overflow-x: hidden;
+}
+
+/* Navigation Styles */
+.navbar {
+    padding: 1rem 0;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: var(--shadow-soft);
+}
+
+.diaas-logo {
+    color: var(--diaas-orange);
+    font-weight: 800;
+    font-size: 1.8rem;
+    transition: var(--transition-smooth);
+}
+
+.diaas-logo img {
+    height: 50px;
+    width: auto;
+    transition: var(--transition-smooth);
+}
+
+@media (max-width: 768px) {
+    .diaas-logo img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .diaas-logo img {
+        height: 35px;
+    }
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: conic-gradient(from 0deg, var(--diaas-orange), #ff8c42, var(--diaas-orange));
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.logo-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: var(--diaas-white);
+    border-radius: 50%;
+}
+
+.nav-link {
+    color: var(--diaas-dark-gray) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.nav-link:hover {
+    color: var(--diaas-orange) !important;
+}
+
+.btn-contact {
+    background: linear-gradient(45deg, var(--diaas-orange), #ff8c42);
+    color: var(--diaas-white) !important;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 25px;
+    margin-left: 1rem;
+    border: none;
+}
+
+.btn-contact:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+

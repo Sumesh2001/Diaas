@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Section</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .team {
+      padding: 60px 0;
+      background-color: #f9f9f9;
+    }
+
+    .team .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .team .team-member {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .team .team-member:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .team .member-img {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team .member-img img {
+      width: 100%;
+      height: 280px; /* Updated height */
+      object-fit: cover; /* Ensure the image scales properly */
+      transition: transform 0.3s ease;
+    }
+
+    .team .team-member:hover .member-img img {
+      transform: scale(1.1);
+    }
+
+    .team .social {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .team .team-member:hover .social {
+      opacity: 1;
+    }
+
+    .team .social a {
+      color: #fff;
+      background: #007bff;
+      border-radius: 50%;
+      padding: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+
+    .team .social a:hover {
+      background: #0056b3;
+    }
+
+    .team .member-info {
+      padding: 20px;
+    }
+
+    .team .member-info h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      text-transform: uppercase; /* Ensure names are in uppercase */
+    }
+
+    .team .member-info span {
+      font-size: 14px;
+      color: #6c757d;
+    }
+
+    .team .description-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      transition: opacity 0.3s ease;
+    }
+
+    .team .team-member:hover .description-overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Team Section -->
+<section id="team" class="team section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Team</h2>
+      <p>Our hard-working team</p>
+    </div>
+
+    <div class="row">
+      <!-- Row 1 -->
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="team-member h-100 w-100">
+          <div class="member-img">
+            <img src="assets/img/team/Samarjit.png" class="img-fluid" alt="Samarjit">
+            <div class="description-overlay">
+              <p>Samarjit is a Cyber Veteran with 22 years of Consulting and Leadership experience. He is responsible for shaping the Organizational Vision and Capability Development at Diaas</p>
+            </div>
+            <div class="social">
+              <a href="#"><i class="bi bi-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/samarjit-acharjee-diaas/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>SAMARJIT ACHARJEE</h4>
+            <span>Managing Director</span>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="team-member h-100 w-100">
+          <div class="member-img">
+            <img src="assets/img/team/monalisa.png" class="img-fluid" alt="Monalisa Pal">
+            <div class="description-overlay">
+              <p>Monalisa manages the Operations, HR and Strategic Alliances for the organization. Prior to this, she had been an acclaimed TV and Stage actor for over 17 years.</p>
+            </div>
+            <div class="social">
+              <a href="#"><i class="bi bi-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/monalisa-pal-diaas/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>MONALISA PAL</h4>
+            <span>Managing Director</span>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="team-member h-100 w-100">
+          <div class="member-img">
+            <img class="img-fluid" src="assets/img/team/doyel.png" alt="Doyel">
+            <div class="description-overlay">
+              <p>Doyel has over 7 years of experience in Cybersecurity, Android Development and Programming. She is the Lead IAM Consultant for IGA, SSO and PAM engagements.</p>
+            </div>
+            <div class="social">
+              <a href="#"><i class="bi bi-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/doyel-basu"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>DOYEL BASU</h4>
+            <span>Senior Consultant</span>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="team-member h-100 w-100">
+          <div class="member-img">
+            <img class="img-fluid" src="assets/img/team/Neha.png" alt="Neha">
+            <div class="description-overlay">
+              <p>Neha has over 7 years of experience in IAM projects in various roles such as Business Analyst, Project Manager and Training Instructor. She is a Certified  Okta ,OneLogin and ISC2 CC.</p>
+            </div>
+            <div class="social">
+              <a href="#"><i class="bi bi-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/neha-jadoun-48a202257/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>NEHA JADOUN</h4>
+            <span>Senior Consultant </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <!-- Row 2 -->
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="team-member h-100 w-100">
+          <div class="member-img">
+            <img class="img-fluid" src="assets/img/team/Madhurima.png" alt="Madhurima">
+            <div class="description-overlay">
+              <p>Madhurima brings over 7 years of experience in IAM, experienced in SailPoint and Okta. She is a Certified Scrum Master and has experience in Full Stack Development.</p>
+            </div>
+            <div class="social">
+              <a href="#"><i class="bi bi-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/madhurimahazra/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>MADHURIMA HAZRA</h4>
+            <span>Senior Consultant </span>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="team-member h-100 w-100">
+          <div class="member-img">
+            <img class="img-fluid" src="assets/img/team/vinay.png" alt="Vinay">
+            <div class="description-overlay">
+              <p>Vinay is an IAM and cybersecurity professional with 6 years experience in identity transformation, managed services, SSO, PAM, and risk management. He is a Certified Okta and CompTIA Security+.</p>
+            </div>
+            <div class="social">
+              <a href="#"><i class="bi bi-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/vinay-joshi-diaas/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>VINAY JOSHI</h4>
+            <span>Senior Consultant</span>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="team-member h-100 w-100">
+          <div class="member-img">
+            <img class="img-fluid" src="assets/img/team/gayatri.png" alt="Gayatri">
+            <div class="description-overlay">
+              <p>Gayatri brings over 4 years of experience in IAM and Data Science. She specializes in IGA and SSO implementations & administration, with expertise in SailPoint ISC and IIQ. She is a Certified Okta.</p>
+            </div>
+            <div class="social">
+              <a href="#"><i class="bi bi-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/gayatri-salokhe-diaas/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>GAYATRI SALOKHE</h4>
+            <span>Consultant</span>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="team-member h-100 w-100">
+          <div class="member-img">
+            <img class="img-fluid" src="assets/img/team/sumesh.png" alt="Sumesh">
+            <div class="description-overlay">
+              <p>Sumesh brings over 2 years of experience, skilled in Greenfield IAM Implementations, SailPoint IIQ/ISC, Okta, IAM, CSPM/SSPM and full stack development. He is a Certified Okta and SailPoint Leader.</p>
+            </div>
+            <div class="social">
+              <a href="#"><i class="bi bi-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/sumesh-shaji-diaas/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>SUMESH SHAJI</h4>
+            <span>Associate Consultant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <!-- Row 3 -->
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="team-member h-100 w-100">
+          <div class="member-img">
+            <img class="img-fluid" src="assets/img/team/darbar.png" alt="darbar">
+            <div class="description-overlay">
+              <p>Darbar brings over 2 years of experience, skilled in SailPoint IIQ/ISC, Okta, IAM, CSPM/SSPM and JAVA development.</p>
+            </div>
+            <div class="social">
+              <a href="#"><i class="bi bi-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/darbar-bandemi-94059820b/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>DARBAR BANDEMI</h4>
+            <span>Associate Consultant</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- You can add 3 more members here or leave them empty for spacing -->
+    </div>
+    
+
+    </div>
+
+  </div>
+</section>
+
+
+</body>
+</html>
