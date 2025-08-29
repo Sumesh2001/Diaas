@@ -1,0 +1,154 @@
+/* Theme Variations and Dark Mode */
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --diaas-white: #1a1a1a;
+    --diaas-light-gray: #2d2d2d;
+    --diaas-dark-gray: #ffffff;
+    --shadow-soft: 0 4px 20px rgba(255, 255, 255, 0.05);
+    --shadow-medium: 0 8px 30px rgba(255, 255, 255, 0.08);
+}
+
+/* Dark Theme Styles */
+[data-theme="dark"] body {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .navbar {
+    background: rgba(26, 26, 26, 0.95) !important;
+}
+
+[data-theme="dark"] .navbar.scrolled {
+    background: rgba(26, 26, 26, 0.98) !important;
+}
+
+[data-theme="dark"] .nav-link {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .dropdown-menu {
+    background: #2d2d2d;
+    border-color: #444;
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background: linear-gradient(45deg, var(--diaas-orange), #ff8c42);
+}
+
+[data-theme="dark"] .features-section {
+    background: #2d2d2d;
+}
+
+[data-theme="dark"] .feature-card {
+    background: #3d3d3d;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .summit-logo {
+    background: #2d2d2d;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .summit-title {
+    color: #ffffff;
+}
+
+/* Theme Transition */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Additional Theme Components */
+.theme-card {
+    background: linear-gradient(135deg, var(--diaas-white) 0%, var(--diaas-light-gray) 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.gradient-border {
+    position: relative;
+    background: var(--diaas-white);
+    border-radius: 15px;
+    padding: 2px;
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(45deg, var(--diaas-orange), #ff8c42, var(--diaas-green));
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: subtract;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--diaas-light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, var(--diaas-orange), #ff8c42);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, var(--diaas-orange-hover), var(--diaas-orange));
+}
+
+/* Selection Color */
+::selection {
+    background: var(--diaas-orange);
+    color: var(--diaas-white);
+}
+
+::-moz-selection {
+    background: var(--diaas-orange);
+    color: var(--diaas-white);
+}
+
+/* Focus Styles */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--diaas-orange);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .control-buttons,
+    .theme-toggle-btn,
+    .back-to-top,
+    .scroll-indicator {
+        display: none !important;
+    }
+    
+    .hero-section {
+        background: none !important;
+        color: #000 !important;
+    }
+    
+    * {
+        box-shadow: none !important;
+    }
+}
